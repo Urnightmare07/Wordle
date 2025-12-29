@@ -1,0 +1,82 @@
+body {
+  background-color: #121213;
+  color: white;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 48px;
+  letter-spacing: 3px;
+}
+
+#board {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 5px;
+}
+
+.tile {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.correct {
+  background-color: #538d4e;
+  border-color: #538d4e;
+}
+
+.present {
+  background-color: #b59f3b;
+  border-color: #b59f3b;
+}
+
+.absent {
+  background-color: #3a3a3c;
+  border-color: #3a3a3c;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #818384;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #565758;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+p {
+  margin: 5px 0;
+}
